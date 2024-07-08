@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package calculator;
+
+service Calculator {
+    rpc Add(stream Number) returns (Number) {}
+    rpc Sub(stream Number) returns (Number) {}
+    rpc Mult(stream Number) returns (Number) {}
+    rpc Div(stream Number) returns (Number) {}
+}
+
+message Number {
+    float value = 1;
+}
