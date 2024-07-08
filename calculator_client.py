@@ -31,7 +31,7 @@ async def run():
                 break
             numbers_to_send.append(float(input_value))
 
-        async with grpc.aio.insecure_channel("localhost:66600") as channel:
+        async with grpc.aio.insecure_channel("3.16.159.160:49152") as channel:
             try:
                 stub = calculator_pb2_grpc.CalculatorStub(channel)
                 result: calculator_pb2.Number

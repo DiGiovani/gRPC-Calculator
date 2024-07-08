@@ -41,7 +41,7 @@ class Calculator(calculator_pb2_grpc.CalculatorServicer):
 async def serve() -> None:
     server = grpc.aio.server()
     calculator_pb2_grpc.add_CalculatorServicer_to_server(Calculator(), server)
-    listen_addr = "[::]:66600"
+    listen_addr = "[::]:49152"
     server.add_insecure_port(listen_addr)
     logging.info("Starting server on %s", listen_addr)
 
