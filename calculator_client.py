@@ -25,7 +25,7 @@ async def run():
             print("========================================")
             print(f"Numbers: {numbers_to_send}")
             input_value = input(
-                "Type a value to add to the list (type 'send' to stop adding numberss): "
+                "Type a value to add to the list (type 'send' to stop adding numbers): "
             )
             if input_value == "send":
                 break
