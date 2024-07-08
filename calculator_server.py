@@ -19,7 +19,7 @@ class Calculator(calculator_pb2_grpc.CalculatorServicer):
     def Sub(self, request: Iterator[calculator_pb2.Number], context):
         return calculator_pb2.Number(
             value=reduce(
-                lambda sum, item: item.value - sum, request, next(request).value
+                lambda sum, item: sum - item.value, request, next(request).value
             )
         )
 
